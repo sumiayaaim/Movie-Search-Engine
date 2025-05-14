@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Search Engine</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Hero Section -->
+  <div class="hero-section text-center text-white p-5">
+    <h1 class="display-4 fw-bold">🎬 Movie Search Engine</h1>
+    <p class="lead">Find your favorite movies, explore genres, and discover trending films.</p>
+    <p>Start by typing the name of a movie in the search bar below.</p>
+  </div>
+
+  <!-- Search Section -->
+  <div class="container my-5">
+    <div class="d-flex justify-content-center mb-4">
+      <input type="text" id="search-input" class="form-control w-50" placeholder="Search for a movie...">
+      <button id="search-btn" class="btn btn-primary ms-3">Search</button>
+    </div>
+    <div class="text-center">
+      <small class="text-muted">Tip: Use genres like "action", "comedy", or "thriller" for better results!</small>
+    </div>
+  </div>
+
+  <!-- Results Section -->
+  <div class="container">
+    <div id="results" class="row g-4">
+      <!-- Movies will be dynamically added here -->
+    </div>
+
+    <!-- Pagination -->
+    <nav id="pagination" class="mt-4 d-flex justify-content-center">
+      <!-- Pagination buttons will be dynamically added here -->
+    </nav>
+  </div>
+
+  <!-- Movie Details Modal -->
+  <div class="modal fade" id="movie-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movie-title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-4">
+              <img id="movie-poster" class="img-fluid" alt="Movie Poster">
+            </div>
+            <div class="col-md-8">
+              <p id="movie-overview"></p>
+              <p><strong>Release Date:</strong> <span id="movie-release-date"></span></p>
+              <p><strong>Rating:</strong> ⭐ <span id="movie-rating"></span></p>
+              <p><strong>Genres:</strong> <span id="movie-genres"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>

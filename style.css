@@ -1,0 +1,44 @@
+/* Global Styles */
+body {
+    background-color: #759fc97b;
+    color: #343a40;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background-image: url('https://source.unsplash.com/1600x400/?cinema,movies');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+  }
+  
+  /* Search Button */
+  #search-btn {
+    transition: transform 0.2s;
+  }
+  
+  #search-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Cards */
+  .card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Modal */
+  .modal-content {
+    transition: transform 0.3s;
+  }
+  
+  .modal-content.show {
+    transform: scale(1.1);
+  }
